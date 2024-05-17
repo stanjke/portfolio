@@ -1,0 +1,14 @@
+.navigation {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+  }
+}
