@@ -1,14 +1,11 @@
-import { FC } from "react";
+import { IconName } from './constants';
+import { IconInstance } from './Sources';
+import { IconComponent } from './types';
+import { createIcon } from './createIcon';
 
-import { IconName } from "./constants";
-import { IconInstance } from "./Sources";
-import { IconType } from "./types";
-
-type Icon = {
-  [Key in IconName]: FC<IconType>;
-};
+type Icon = Record<IconName, IconComponent>;
 
 export const Icon: Icon = {
-  [IconName.GITHUB]: IconInstance.GitHub,
-  [IconName.LINKEDIN]: IconInstance.LinkedIn,
+  [IconName.GITHUB]: createIcon(IconInstance.GitHub),
+  [IconName.LINKEDIN]: createIcon(IconInstance.LinkedIn),
 };
